@@ -69,7 +69,7 @@ Add to /etc/hosts
 
 Login with 
 ```
-admin@goodgames.htb
+admin
 superadministrator
 ```
 ![image](https://user-images.githubusercontent.com/87831546/142666482-c888bc72-307e-45ac-a17e-272420a7c995.png)
