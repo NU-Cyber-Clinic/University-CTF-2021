@@ -101,10 +101,20 @@ Using the same password as before `superadministrator`
 ssh augustus@172.19.0.1
 ```
 
-Going back to the docker container we can copy sh over into the users home as we know that is shared with the host machine.
-We can then use `chmod +s` to set the suid bit allowing users that have access to the file to run it as root
+There is a shared folder in both the docker container and in augustus
+```
+/home/augustus
+```
 
-Connecting to the host as the user we now have the suid binary to run which gives us a root shell, then `cat /root/root.txt`.
+Going back to the docker container we can copy /bin/sh over into the users home as we know that is shared with the host machine.
+We can then use `chmod +s` on the container to set the suid bit allowing users that have access to the file to run it as root
+
+Connecting to the host as the user we now have the suid binary to run which gives us a root shell
+```
+./sh
+#
+```
+Then `cat /root/root.txt`.
 ```
 HTB{M0un73d_F1l3_Sy57eM5_4r3_DaNg3R0uS}
 ```
