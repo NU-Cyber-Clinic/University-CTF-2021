@@ -18,10 +18,10 @@ Time based blind sql injection in sign in page
 Dump the users table and we find admin credentials
 ```
 admin@goodgames.htb
-superadministrator
+2b22337f218b2d82dfc3b6f77e7cb8ec
 ```
 
-Logging into admin account and clicking on the settings feature we find subdomain:
+Crack the hash and logging into admin account and clicking on the settings feature we find subdomain:
 ```
 internal-administration
 ```
