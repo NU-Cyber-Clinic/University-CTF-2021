@@ -4,7 +4,7 @@
 
 1) Confirm sql injection ('# comments out any query after it):
 ```
-email=a@a.com'#
+email=a@a.com'#&password=esdfs
 ```
 ![image](https://user-images.githubusercontent.com/87831546/142857635-483e64f9-b383-48e3-a81a-ae49017f7460.png)
 
