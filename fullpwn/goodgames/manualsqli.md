@@ -2,7 +2,7 @@
 
 ![image](https://user-images.githubusercontent.com/87831546/142857492-a15dd841-8ef9-47b4-b074-ff0827e1c11d.png)
 
-1) Confirm sql injection ('# comments out any query after it):
+1) Confirm sql injection ('# comments out any query after it, or you can use -- -):
 ```
 email=a@a.com'#&password=esdfs
 ```
