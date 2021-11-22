@@ -62,4 +62,4 @@ And we get the same data that sqlmap gave us!
 +------+---------------------+--------+----------------------------------+
 ```
 
-One thing to note is that all results seem to strangely precede with an 'a', just miss this out of all results
+One thing to note is that all results precede with an 'a' as this is the name of the user account i created, and we log in as with every sqli
