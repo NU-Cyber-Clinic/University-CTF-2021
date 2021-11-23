@@ -58,7 +58,7 @@ while( true ) {
     isFileOpen = (***(code ***)(&PTR_PTR_00117880)[(byte)(&DAT_0010e090)[(int)i]])
 ```
 7. We can see in assembly that it actually uses something called `vtables` to call a different function by its offset in memory rather than using a function name. It also uses the `i` counter to iterate through the different offsets.
-8. It's easier to see this in IDA's assembly graph where insteand of a subroutine, it calls the function at the address stored in `rcx` which is changed with each iteration.
+8. It's easier to see this in IDA's assembly graph where instead of a subroutine, it calls the function at the address stored in `rcx` which is changed with each iteration.
 ```assembly
 loc_559AF6171353:
     movsxd  rcx, [rbp+i]
