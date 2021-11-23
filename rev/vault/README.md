@@ -69,7 +69,7 @@ loc_559AF6171353:
     mov     rdi, [rcx+rsi*8]
     mov     rcx, [rdi]
     mov     rcx, [rcx]
-    call    rcx # This is where each value is called; set a breakpoint here
+    call    rcx ; This is where each value is called, set a breakpoint here
     mov     cl, al
     mov     [rbp+isFileOpen], cl
     jmp     $+5
