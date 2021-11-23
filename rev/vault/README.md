@@ -19,6 +19,7 @@ Could not find credentials
     }
 ```
 NOTE: the variable names have been assigned by me. The decompiler just assigned them an identifier in the format of `local_10`, `local_11`, etc.
+
 4. Creating `flag.txt` in the same folder and running `vault` will give this result
 ```
 ┌──(kali㉿kali)-[~/Downloads/rev_vault]
